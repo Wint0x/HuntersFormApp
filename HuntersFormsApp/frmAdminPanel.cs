@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using HuntersFormsApp;
 using MongoDB.Driver.Core.Configuration;
 using MongoDB.Driver.Linq;
+using HuntersFormsApp.Properties;
 
 namespace HuntersFormsApp
 {
@@ -33,6 +34,17 @@ namespace HuntersFormsApp
                 Application.Exit();
             }
         }
+
+        // get db
+        public static MongoClientSettings settings = MongoClientSettings.FromConnectionString(connectionString);
+        internal static MongoClient client = new MongoClient(settings);
+
+        internal static IMongoDatabase usersDatabase = client.GetDatabase("test");
+
+        // get a collection reference
+        internal static IMongoCollection<Users> personsCollection = usersDatabase
+            .GetCollection<Users>("users");
+
 
         private void close_btn_Click(object sender, EventArgs e)
         {
@@ -57,18 +69,6 @@ namespace HuntersFormsApp
                 Box.ErrorBox("Attempted to delete admin account!", "Critical Error!");
                 return;
             }
-
-            // get db
-            var settings = MongoClientSettings.FromConnectionString(connectionString);
-            settings.LinqProvider = LinqProvider.V3;
-
-            var client = new MongoClient(settings);
-
-            var usersDatabase = client.GetDatabase("test");
-
-            // get a collection reference
-            var personsCollection = usersDatabase
-                .GetCollection<Users>("users");
 
             // find a person using an equality filter on its id
             var filter = Builders<Users>.Filter.Eq(person => person.User, userToDelete);
@@ -102,6 +102,49 @@ namespace HuntersFormsApp
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        //Iterate all users
+        static public bool button1_clicked = false;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //boolean to change functionality of the button on each click
+            if (!button1_clicked)
+            {
+
+                ////Load DB again
+                //var settings = MongoClientSettings.FromConnectionString(connectionString);
+                //settings.LinqProvider = LinqProvider.V3;
+
+                //var client = new MongoClient(settings);
+
+                //var usersDatabase = client.GetDatabase("test");
+
+                //// get a collection reference
+                //var personsCollection = usersDatabase
+                //    .GetCollection<Users>("users");
+
+                //Get all users from collection (loaded at start)
+                var all_users = personsCollection.AsQueryable().AsEnumerable().Select(x => x.User);
+
+                string print_users = string.Join(", ", all_users);
+                this.users_lbl.Text = $"Here is the list of users:\n{print_users}";
+
+                this.button1.Text = "Hide Users";
+
+                button1_clicked = true;
+            }
+
+            else
+            {
+                this.users_lbl.Text = "";
+                this.button1.Text = "Show Users";
+                button1_clicked = false;
+            }
+
+
+            return;
         }
     }
 }

@@ -131,7 +131,7 @@ namespace OriginLauncher
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 
@@ -156,5 +156,5 @@ namespace OriginLauncher
         public string Email { get; set; }
     }
 }
-    
+
 

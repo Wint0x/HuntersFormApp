@@ -35,6 +35,8 @@
             this.doActionBtn = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dltLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.users_lbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,12 +114,39 @@
             this.dltLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.dltLabel.Click += new System.EventHandler(this.label1_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkOrange;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(323, 447);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(169, 44);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Show Users";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // users_lbl
+            // 
+            this.users_lbl.AutoSize = true;
+            this.users_lbl.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.users_lbl.Location = new System.Drawing.Point(25, 236);
+            this.users_lbl.Name = "users_lbl";
+            this.users_lbl.Size = new System.Drawing.Size(0, 23);
+            this.users_lbl.TabIndex = 19;
+            // 
             // frmAdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 563);
+            this.Controls.Add(this.users_lbl);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dltLabel);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.doActionBtn);
@@ -146,5 +175,7 @@
         private System.Windows.Forms.Button doActionBtn;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label dltLabel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label users_lbl;
     }
 }

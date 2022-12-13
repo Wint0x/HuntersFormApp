@@ -63,6 +63,7 @@
             this.cPanelBtn.TabIndex = 36;
             this.cPanelBtn.Text = "PANEL";
             this.cPanelBtn.UseVisualStyleBackColor = false;
+            this.cPanelBtn.Visible = false;
             this.cPanelBtn.Click += new System.EventHandler(this.cPanelBtn_Click);
             // 
             // pictureBox1

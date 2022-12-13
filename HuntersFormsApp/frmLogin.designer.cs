@@ -87,7 +87,7 @@
             this.checkboxShowpass.AutoSize = true;
             this.checkboxShowpass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkboxShowpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkboxShowpass.Location = new System.Drawing.Point(134, 300);
+            this.checkboxShowpass.Location = new System.Drawing.Point(37, 289);
             this.checkboxShowpass.Name = "checkboxShowpass";
             this.checkboxShowpass.Size = new System.Drawing.Size(151, 27);
             this.checkboxShowpass.TabIndex = 5;
@@ -102,9 +102,9 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(37, 355);
+            this.button1.Location = new System.Drawing.Point(35, 355);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(216, 35);
+            this.button1.Size = new System.Drawing.Size(106, 35);
             this.button1.TabIndex = 6;
             this.button1.Text = "LOGIN";
             this.button1.UseVisualStyleBackColor = false;
@@ -116,9 +116,9 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.button2.Location = new System.Drawing.Point(37, 416);
+            this.button2.Location = new System.Drawing.Point(147, 355);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(216, 35);
+            this.button2.Size = new System.Drawing.Size(106, 35);
             this.button2.TabIndex = 7;
             this.button2.Text = "CLEAR";
             this.button2.UseVisualStyleBackColor = false;
