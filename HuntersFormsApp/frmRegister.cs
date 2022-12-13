@@ -38,7 +38,7 @@ namespace OriginLauncher
             string lname = (String.IsNullOrEmpty(this.txtLastname.Text) ? null : this.txtLastname.Text);
             string mail = (String.IsNullOrEmpty(this.txtEmail.Text) ? null : this.txtEmail.Text);
 
-            string country = (String.IsNullOrEmpty(this.txtCountry.Text) ? null : this.txtCountry.Text);
+            string interests = (String.IsNullOrEmpty(this.txtInterests.Text) ? "None" : this.txtInterests.Text);
 
             int ageNum = 0;
             string age = null;
@@ -122,18 +122,6 @@ namespace OriginLauncher
                 return;
             }
 
-            //Capitalize country word just in case
-            if (country != null)
-            {
-                country = Char.ToUpper(country[0]).ToString() + country.Substring(1);
-            }
-
-            //Country validity check
-            if (!Countries.availableCountries.Contains(country))
-            {
-                country = "Unknown";
-            }
-
             //Database
             var settings = MongoClientSettings.FromConnectionString(connectionString);
             settings.LinqProvider = LinqProvider.V3;
@@ -164,7 +152,7 @@ namespace OriginLauncher
                 {"pass", password },
                 { "fname", fname},
                 { "lname", lname},
-                {"country", country },
+                {"interests", interests },
                 { "email", mail},
                 { "age", age}          
              };
@@ -203,7 +191,7 @@ namespace OriginLauncher
             txtConPassword.Text = "";
             txtFirstname.Text = "";
             txtLastname.Text = "";
-            txtCountry.Text = "";
+            txtInterests.Text = "";
             txtEmail.Text = "";
             txtAge.Text = "";
             txtUsername.Focus();
@@ -237,24 +225,6 @@ namespace OriginLauncher
 
     }
 
-    //For read only query
-    //[BsonIgnoreExtraElements]
-    //internal class Users
-    //{
-    //    [BsonId]
-    //    [BsonRepresentation(BsonType.ObjectId)]
-    //    public int Id { get; set; }
-
-    //    [BsonElement("user")]
-    //    [BsonRequired]
-    //    public string User { get; set; }
-
-    //    [BsonElement("pass")]
-    //    [BsonRequired]
-    //    public string Password { get; set; }
-
-    //}
-
     //Collection field from C# class to BSON mapping, for post only action (do registration)
     [BsonIgnoreExtraElements]
     internal class UsersRegister
@@ -279,9 +249,9 @@ namespace OriginLauncher
         [BsonRequired]
         public string LastName { get; set; }
 
-        [BsonElement("country")]
+        [BsonElement("interests")]
         [BsonIgnoreIfNull]
-        public string Country { get; set; }
+        public string Interests { get; set; }
 
         [BsonElement("email")]
         [BsonRequired]

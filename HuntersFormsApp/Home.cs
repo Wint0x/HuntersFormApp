@@ -25,6 +25,13 @@ namespace HuntersFormsApp
         private void Home_Load(object sender, EventArgs e)
         {
             label1.Text += $", {frmLogin.AuthPublicName}!";
+
+            //Allow access to admin control panel
+            if (frmLogin.AuthPublicName == "admin")
+            {
+                this.cPanelBtn.Visible = true;
+            }
+
         }
 
         private void Home_FormClosed(object sender, FormClosedEventArgs e)

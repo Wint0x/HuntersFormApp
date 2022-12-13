@@ -47,7 +47,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtCountry = new System.Windows.Forms.TextBox();
+            this.txtInterests = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtConPassword = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -83,7 +83,7 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.button2.Location = new System.Drawing.Point(316, 478);
+            this.button2.Location = new System.Drawing.Point(421, 417);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(216, 35);
             this.button2.TabIndex = 17;
@@ -98,7 +98,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(316, 417);
+            this.button1.Location = new System.Drawing.Point(199, 417);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(216, 35);
             this.button1.TabIndex = 16;
@@ -242,254 +242,24 @@
             this.label9.Size = new System.Drawing.Size(100, 23);
             this.label9.TabIndex = 34;
             // 
-            // txtCountry
+            // txtInterests
             // 
-            this.txtCountry.AutoCompleteCustomSource.AddRange(new string[] {
-            "Afghanistan",
-            "Albania",
-            "Algeria",
-            "Andorra",
-            "Angola",
-            "Antigua and Barbuda",
-            "Argentina",
-            "Armenia",
-            "Australia",
-            "Austria",
-            "Austrian Empire*",
-            "Azerbaijan",
-            "Baden*",
-            "Bahamas, The",
-            "Bahrain",
-            "Bangladesh",
-            "Barbados",
-            "Bavaria*",
-            "Belarus",
-            "Belgium",
-            "Belize",
-            "Benin (Dahomey)",
-            "Bolivia",
-            "Bosnia and Herzegovina",
-            "Botswana",
-            "Brazil",
-            "Brunei",
-            "Brunswick and Lüneburg",
-            "Bulgaria",
-            "Burkina Faso (Upper Volta)",
-            "Burma",
-            "Burundi",
-            "Cabo Verde",
-            "Cambodia",
-            "Cameroon",
-            "Canada",
-            "Cayman Islands, The",
-            "Central African Republic",
-            "Central American Federation*",
-            "Chad",
-            "Chile",
-            "China",
-            "Colombia",
-            "Comoros",
-            "Congo Free State, The",
-            "Costa Rica",
-            "Cote d’Ivoire (Ivory Coast)",
-            "Croatia",
-            "Cuba",
-            "Cyprus",
-            "Czechia",
-            "Czechoslovakia",
-            "Democratic Republic of the Congo",
-            "Denmark",
-            "Djibouti",
-            "Dominica",
-            "Dominican Republic",
-            "Duchy of Parma, The*",
-            "E",
-            "East Germany (German Democratic Republic)*",
-            "Ecuador",
-            "Egypt",
-            "El Salvador",
-            "Equatorial Guinea",
-            "Eritrea",
-            "Estonia",
-            "Eswatini",
-            "Ethiopia",
-            "Federal Government of Germany (1848-49)*",
-            "Fiji",
-            "Finland",
-            "France",
-            "Gabon",
-            "Gambia, The",
-            "Georgia",
-            "Germany",
-            "Ghana",
-            "Grand Duchy of Tuscany, The*",
-            "Greece",
-            "Grenada",
-            "Guatemala",
-            "Guinea",
-            "Guinea-Bissau",
-            "Guyana",
-            "Haiti",
-            "Hanover*",
-            "Hanseatic Republics*",
-            "Hawaii*",
-            "Hesse*",
-            "Holy See",
-            "Honduras",
-            "Hungary",
-            "Iceland",
-            "India",
-            "Indonesia",
-            "Iran",
-            "Iraq",
-            "Ireland",
-            "Israel",
-            "Italy",
-            "Jamaica",
-            "Japan",
-            "Jordan",
-            "Kazakhstan",
-            "Kenya",
-            "Kingdom of Serbia/Yugoslavia*",
-            "Kiribati",
-            "Korea",
-            "Kosovo",
-            "Kuwait",
-            "Kyrgyzstan",
-            "Laos",
-            "Latvia",
-            "Lebanon",
-            "Lesotho",
-            "Lew Chew (Loochoo)*",
-            "Liberia",
-            "Libya",
-            "Liechtenstein",
-            "Lithuania",
-            "Luxembourg",
-            "Madagascar",
-            "Malawi",
-            "Malaysia",
-            "Maldives",
-            "Mali",
-            "Malta",
-            "Marshall Islands",
-            "Mauritania",
-            "Mauritius",
-            "Mecklenburg-Schwerin*",
-            "Mecklenburg-Strelitz*",
-            "Mexico",
-            "Micronesia",
-            "Moldova",
-            "Monaco",
-            "Mongolia",
-            "Montenegro",
-            "Morocco",
-            "Mozambique",
-            "Namibia",
-            "Nassau*",
-            "Nauru",
-            "Nepal",
-            "Netherlands, The",
-            "New Zealand",
-            "Nicaragua",
-            "Niger",
-            "Nigeria",
-            "North German Confederation*",
-            "North German Union*",
-            "North Macedonia",
-            "Norway",
-            "Oldenburg*",
-            "Oman",
-            "Orange Free State*",
-            "Pakistan",
-            "Palau",
-            "Panama",
-            "Papal States*",
-            "Papua New Guinea",
-            "Paraguay",
-            "Peru",
-            "Philippines",
-            "Piedmont-Sardinia*",
-            "Poland",
-            "Portugal",
-            "Qatar",
-            "Republic of Genoa*",
-            "Republic of Korea (South Korea)",
-            "Republic of the Congo",
-            "Romania",
-            "Russia",
-            "Rwanda",
-            "Saint Kitts and Nevis",
-            "Saint Lucia",
-            "Saint Vincent and the Grenadines",
-            "Samoa",
-            "San Marino",
-            "Sao Tome and Principe",
-            "Saudi Arabia",
-            "Schaumburg-Lippe*",
-            "Senegal",
-            "Serbia",
-            "Seychelles",
-            "Sierra Leone",
-            "Singapore",
-            "Slovakia",
-            "Slovenia",
-            "Solomon Islands, The",
-            "Somalia",
-            "South Africa",
-            "South Sudan",
-            "Spain",
-            "Sri Lanka",
-            "Sudan",
-            "Suriname",
-            "Sweden",
-            "Switzerland",
-            "Syria",
-            "Tajikistan",
-            "Tanzania",
-            "Texas*",
-            "Thailand",
-            "Timor-Leste",
-            "Togo",
-            "Tonga",
-            "Trinidad and Tobago",
-            "Tunisia",
-            "Turkey",
-            "Turkmenistan",
-            "Tuvalu",
-            "Two Sicilies*",
-            "Uganda",
-            "Ukraine",
-            "Union of Soviet Socialist Republics*",
-            "United Arab Emirates, The",
-            "United Kingdom, The",
-            "Uruguay",
-            "Uzbekistan",
-            "Vanuatu",
-            "Venezuela",
-            "Vietnam",
-            "Württemberg*",
-            "Yemen",
-            "Zambia",
-            "Zimbabwe"});
-            this.txtCountry.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtCountry.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtCountry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtCountry.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCountry.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCountry.Location = new System.Drawing.Point(316, 328);
-            this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(216, 31);
-            this.txtCountry.TabIndex = 6;
+            this.txtInterests.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtInterests.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtInterests.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInterests.Location = new System.Drawing.Point(316, 328);
+            this.txtInterests.Name = "txtInterests";
+            this.txtInterests.Size = new System.Drawing.Size(216, 31);
+            this.txtInterests.TabIndex = 6;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(313, 307);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 23);
+            this.label10.Size = new System.Drawing.Size(78, 23);
             this.label10.TabIndex = 30;
-            this.label10.Text = "Country";
+            this.label10.Text = "Interests";
             // 
             // txtConPassword
             // 
@@ -546,7 +316,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtCountry);
+            this.Controls.Add(this.txtInterests);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtConPassword);
             this.Controls.Add(this.label11);
@@ -601,7 +371,7 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtCountry;
+        private System.Windows.Forms.TextBox txtInterests;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtConPassword;
         private System.Windows.Forms.Label label11;
