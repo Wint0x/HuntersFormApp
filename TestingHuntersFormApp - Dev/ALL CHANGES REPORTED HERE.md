@@ -1,7 +1,7 @@
 ## Files Changes
-> frmRegister
-> frmAdminPanel
-> frmLogin
+> frmRegister <br/>
+> frmAdminPanel <br/>
+> frmLogin <br/>
 
 ### Changes
 1. Added upload profile picture option in registration form
