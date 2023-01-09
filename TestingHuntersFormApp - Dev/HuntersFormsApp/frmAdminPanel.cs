@@ -1,4 +1,4 @@
-﻿using MongoDB.Driver;
+using MongoDB.Driver;
 using OriginLauncher;
 using System;
 using System.Collections.Generic;
@@ -186,6 +186,11 @@ namespace HuntersFormsApp
         static string GetDictionaryString(Dictionary<string, string> dictionary)
         {
             return string.Join("", dictionary.Select(pair => (String.IsNullOrWhiteSpace(pair.Value) ? $"{pair.Key}\n--------\n" : $"{pair.Key}\nPFP:{pair.Value}\n--------\n")));
+        }
+
+        private void adminImage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
