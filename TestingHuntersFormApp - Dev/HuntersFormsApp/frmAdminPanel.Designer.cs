@@ -1,4 +1,4 @@
-﻿namespace HuntersFormsApp
+namespace HuntersFormsApp
 {
     partial class frmAdminPanel
     {
@@ -38,9 +38,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.users_lbl = new System.Windows.Forms.Label();
             this.pfp_view = new System.Windows.Forms.CheckBox();
-            this.adminImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adminImage)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -156,25 +154,12 @@
             this.pfp_view.UseVisualStyleBackColor = true;
             this.pfp_view.CheckedChanged += new System.EventHandler(this.pfp_view_CheckedChanged);
             // 
-            // adminImage
-            // 
-            this.adminImage.ImageLocation = "C:\\Users\\costi\\OneDrive\\Desktop\\TestingHuntersFormApp - Dev\\HuntersFormsApp\\Resou" +
-    "rces\\admin.png";
-            this.adminImage.InitialImage = ((System.Drawing.Image)(resources.GetObject("adminImage.InitialImage")));
-            this.adminImage.Location = new System.Drawing.Point(-1, 163);
-            this.adminImage.Name = "adminImage";
-            this.adminImage.Size = new System.Drawing.Size(47, 41);
-            this.adminImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.adminImage.TabIndex = 21;
-            this.adminImage.TabStop = false;
-            // 
             // frmAdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 563);
-            this.Controls.Add(this.adminImage);
             this.Controls.Add(this.pfp_view);
             this.Controls.Add(this.users_lbl);
             this.Controls.Add(this.button1);
@@ -193,7 +178,6 @@
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.frmAdminPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adminImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,6 +194,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label users_lbl;
         private System.Windows.Forms.CheckBox pfp_view;
-        private System.Windows.Forms.PictureBox adminImage;
     }
 }
