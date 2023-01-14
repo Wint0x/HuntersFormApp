@@ -69,6 +69,10 @@ namespace HuntersFormsApp
 
         private void profile_Click(object sender, EventArgs e)
         {
+            if (frmLogin.AuthPublicName == "admin")
+            {
+                return; //Disallow profile information for admin because of missing BSON elements in its document
+            }
             new frmProfile().Show();
             this.Hide();
         }
