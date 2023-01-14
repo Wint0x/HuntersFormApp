@@ -66,5 +66,11 @@ namespace HuntersFormsApp
             this.Hide();
             backToLogin.Show();
         }
+
+        private void profile_Click(object sender, EventArgs e)
+        {
+            new frmProfile().Show();
+            this.Hide();
+        }
     }
 }

@@ -34,6 +34,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.logoutBtn = new System.Windows.Forms.Button();
+            this.profile = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Location = new System.Drawing.Point(201, 99);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(395, 73);
+            this.label1.Size = new System.Drawing.Size(316, 59);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome back";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -108,12 +109,23 @@
             this.logoutBtn.UseVisualStyleBackColor = false;
             this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
+            // profile
+            // 
+            this.profile.Location = new System.Drawing.Point(368, 293);
+            this.profile.Name = "profile";
+            this.profile.Size = new System.Drawing.Size(75, 23);
+            this.profile.TabIndex = 41;
+            this.profile.Text = "button1";
+            this.profile.UseVisualStyleBackColor = true;
+            this.profile.Click += new System.EventHandler(this.profile_Click);
+            // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 562);
+            this.Controls.Add(this.profile);
             this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox1);
@@ -139,6 +151,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button logoutBtn;
+        private System.Windows.Forms.Button profile;
     }
 }
 
