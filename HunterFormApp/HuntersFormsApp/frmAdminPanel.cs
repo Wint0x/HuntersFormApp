@@ -16,6 +16,8 @@ using HuntersFormsApp.Properties;
 using static MongoDB.Driver.WriteConcern;
 using System.IO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Collections.ObjectModel;
+using MongoDB.Bson;
 
 namespace HuntersFormsApp
 {
@@ -229,6 +231,27 @@ namespace HuntersFormsApp
             Home homefrm = new Home();
             this.Hide();
             homefrm.Show();
+        }
+
+        private void updt_path_btn_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(this.textBox1.Text))
+            {
+                Box.ErrorBox("Please enter a user name first!", "Missing UserError!");
+                return;
+            }
+
+            string input = "";
+            var getImagePathToUpdate = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(this.textBox1.Text)).Select(x => x.Image).First().ToString();
+
+            var get_filename = getImagePathToUpdate.Split('\\').ToList().Last();
+
+            string new_path = Path.Combine(RESOURCES_PATH, get_filename).ToString();
+
+            var filter = Builders<Users>.Filter.Eq(us => us.User, this.textBox1.Text);
+            var update = Builders<Users>.Update.Set(us => us.Image, new_path);
+            var result = personsCollection.UpdateOne(filter, update);
+            Box.SuccessBox("Succesfully updated the user path!", "SUCCESS!");
         }
     }
 

@@ -39,6 +39,7 @@ namespace HuntersFormsApp
             this.users_lbl = new System.Windows.Forms.Label();
             this.pfp_view = new System.Windows.Forms.CheckBox();
             this.goBackBtn = new System.Windows.Forms.Button();
+            this.updt_path_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +92,7 @@ namespace HuntersFormsApp
             this.doActionBtn.Name = "doActionBtn";
             this.doActionBtn.Size = new System.Drawing.Size(169, 44);
             this.doActionBtn.TabIndex = 15;
-            this.doActionBtn.Text = "EXECUTE";
+            this.doActionBtn.Text = "DELETE";
             this.doActionBtn.UseVisualStyleBackColor = false;
             this.doActionBtn.Click += new System.EventHandler(this.doActionBtn_Click);
             // 
@@ -110,9 +111,9 @@ namespace HuntersFormsApp
             this.dltLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.dltLabel.Location = new System.Drawing.Point(20, 485);
             this.dltLabel.Name = "dltLabel";
-            this.dltLabel.Size = new System.Drawing.Size(145, 28);
+            this.dltLabel.Size = new System.Drawing.Size(134, 28);
             this.dltLabel.TabIndex = 17;
-            this.dltLabel.Text = "Delete Account";
+            this.dltLabel.Text = "Enter Account";
             this.dltLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.dltLabel.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -171,12 +172,29 @@ namespace HuntersFormsApp
             this.goBackBtn.UseVisualStyleBackColor = false;
             this.goBackBtn.Click += new System.EventHandler(this.goBackBtn_Click);
             // 
+            // updt_path_btn
+            // 
+            this.updt_path_btn.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.updt_path_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.updt_path_btn.FlatAppearance.BorderSize = 0;
+            this.updt_path_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updt_path_btn.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updt_path_btn.ForeColor = System.Drawing.Color.White;
+            this.updt_path_btn.Location = new System.Drawing.Point(323, 382);
+            this.updt_path_btn.Name = "updt_path_btn";
+            this.updt_path_btn.Size = new System.Drawing.Size(169, 44);
+            this.updt_path_btn.TabIndex = 22;
+            this.updt_path_btn.Text = "Update Pfp Path";
+            this.updt_path_btn.UseVisualStyleBackColor = false;
+            this.updt_path_btn.Click += new System.EventHandler(this.updt_path_btn_Click);
+            // 
             // frmAdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 563);
+            this.Controls.Add(this.updt_path_btn);
             this.Controls.Add(this.goBackBtn);
             this.Controls.Add(this.pfp_view);
             this.Controls.Add(this.users_lbl);
@@ -213,5 +231,6 @@ namespace HuntersFormsApp
         private System.Windows.Forms.Label users_lbl;
         private System.Windows.Forms.CheckBox pfp_view;
         private System.Windows.Forms.Button goBackBtn;
+        private System.Windows.Forms.Button updt_path_btn;
     }
 }
