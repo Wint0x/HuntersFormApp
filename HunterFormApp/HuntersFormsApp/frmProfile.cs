@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -86,6 +86,12 @@ namespace HuntersFormsApp
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void goback_Click(object sender, EventArgs e)
+        {
+            new Home().Show();
+            this.Hide();
         }
     }
     //Collection field from C# class to BSON mapping, for post only action (do registration)
