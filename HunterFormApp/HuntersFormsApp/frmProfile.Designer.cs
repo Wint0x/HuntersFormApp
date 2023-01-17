@@ -1,4 +1,4 @@
-﻿
+
 namespace HuntersFormsApp
 {
     partial class frmProfile
@@ -47,10 +47,10 @@ namespace HuntersFormsApp
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(0, -5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(801, 95);
+            this.pictureBox1.Size = new System.Drawing.Size(1068, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
@@ -62,9 +62,10 @@ namespace HuntersFormsApp
             this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logoutBtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.logoutBtn.Location = new System.Drawing.Point(604, 522);
+            this.logoutBtn.Location = new System.Drawing.Point(805, 642);
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(87, 28);
+            this.logoutBtn.Size = new System.Drawing.Size(116, 34);
             this.logoutBtn.TabIndex = 42;
             this.logoutBtn.Text = "LOGOUT";
             this.logoutBtn.UseVisualStyleBackColor = false;
@@ -77,9 +78,10 @@ namespace HuntersFormsApp
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(697, 522);
+            this.button3.Location = new System.Drawing.Point(929, 642);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 28);
+            this.button3.Size = new System.Drawing.Size(116, 34);
             this.button3.TabIndex = 41;
             this.button3.Text = "EXIT";
             this.button3.UseVisualStyleBackColor = false;
@@ -91,9 +93,10 @@ namespace HuntersFormsApp
             this.profName.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.profName.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.profName.Location = new System.Drawing.Point(186, 100);
+            this.profName.Location = new System.Drawing.Point(248, 123);
+            this.profName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.profName.Name = "profName";
-            this.profName.Size = new System.Drawing.Size(163, 37);
+            this.profName.Size = new System.Drawing.Size(202, 46);
             this.profName.TabIndex = 43;
             this.profName.Text = "First Name:";
             this.profName.Click += new System.EventHandler(this.profName_Click);
@@ -104,9 +107,10 @@ namespace HuntersFormsApp
             this.profAge.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.profAge.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.profAge.Location = new System.Drawing.Point(50, 250);
+            this.profAge.Location = new System.Drawing.Point(67, 308);
+            this.profAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.profAge.Name = "profAge";
-            this.profAge.Size = new System.Drawing.Size(75, 37);
+            this.profAge.Size = new System.Drawing.Size(92, 46);
             this.profAge.TabIndex = 44;
             this.profAge.Text = "Age:";
             this.profAge.Click += new System.EventHandler(this.profAge_Click);
@@ -117,9 +121,10 @@ namespace HuntersFormsApp
             this.profEmail.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.profEmail.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.profEmail.Location = new System.Drawing.Point(50, 300);
+            this.profEmail.Location = new System.Drawing.Point(67, 369);
+            this.profEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.profEmail.Name = "profEmail";
-            this.profEmail.Size = new System.Drawing.Size(105, 37);
+            this.profEmail.Size = new System.Drawing.Size(130, 46);
             this.profEmail.TabIndex = 45;
             this.profEmail.Text = "E-mail:";
             // 
@@ -129,9 +134,10 @@ namespace HuntersFormsApp
             this.profGender.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.profGender.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.profGender.Location = new System.Drawing.Point(186, 163);
+            this.profGender.Location = new System.Drawing.Point(248, 201);
+            this.profGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.profGender.Name = "profGender";
-            this.profGender.Size = new System.Drawing.Size(159, 37);
+            this.profGender.Size = new System.Drawing.Size(195, 46);
             this.profGender.TabIndex = 46;
             this.profGender.Text = "Last Name:";
             // 
@@ -141,18 +147,20 @@ namespace HuntersFormsApp
             this.profInterests.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.profInterests.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profInterests.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.profInterests.Location = new System.Drawing.Point(50, 350);
+            this.profInterests.Location = new System.Drawing.Point(67, 431);
+            this.profInterests.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.profInterests.Name = "profInterests";
-            this.profInterests.Size = new System.Drawing.Size(136, 37);
+            this.profInterests.Size = new System.Drawing.Size(167, 46);
             this.profInterests.TabIndex = 47;
             this.profInterests.Text = "Interests:";
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox2.Location = new System.Drawing.Point(50, 100);
+            this.pictureBox2.Location = new System.Drawing.Point(67, 123);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox2.Size = new System.Drawing.Size(133, 123);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 48;
             this.pictureBox2.TabStop = false;
@@ -165,19 +173,21 @@ namespace HuntersFormsApp
             this.goback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goback.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goback.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.goback.Location = new System.Drawing.Point(50, 406);
+            this.goback.Location = new System.Drawing.Point(67, 500);
+            this.goback.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.goback.Name = "goback";
-            this.goback.Size = new System.Drawing.Size(87, 28);
+            this.goback.Size = new System.Drawing.Size(116, 34);
             this.goback.TabIndex = 49;
             this.goback.Text = "BACK";
             this.goback.UseVisualStyleBackColor = false;
+            this.goback.Click += new System.EventHandler(this.goback_Click);
             // 
             // frmProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(800, 562);
+            this.ClientSize = new System.Drawing.Size(1067, 692);
             this.Controls.Add(this.goback);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.profInterests);
@@ -190,6 +200,7 @@ namespace HuntersFormsApp
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(100, 200);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmProfile";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmProfile_Load);
