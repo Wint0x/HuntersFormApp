@@ -40,6 +40,7 @@ namespace HuntersFormsApp
             this.pfp_view = new System.Windows.Forms.CheckBox();
             this.goBackBtn = new System.Windows.Forms.Button();
             this.updt_path_btn = new System.Windows.Forms.Button();
+            this.update_all_paths_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -188,12 +189,29 @@ namespace HuntersFormsApp
             this.updt_path_btn.UseVisualStyleBackColor = false;
             this.updt_path_btn.Click += new System.EventHandler(this.updt_path_btn_Click);
             // 
+            // update_all_paths_btn
+            // 
+            this.update_all_paths_btn.BackColor = System.Drawing.Color.Lime;
+            this.update_all_paths_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.update_all_paths_btn.FlatAppearance.BorderSize = 0;
+            this.update_all_paths_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.update_all_paths_btn.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update_all_paths_btn.ForeColor = System.Drawing.Color.White;
+            this.update_all_paths_btn.Location = new System.Drawing.Point(323, 320);
+            this.update_all_paths_btn.Name = "update_all_paths_btn";
+            this.update_all_paths_btn.Size = new System.Drawing.Size(169, 44);
+            this.update_all_paths_btn.TabIndex = 23;
+            this.update_all_paths_btn.Text = "Update All Paths";
+            this.update_all_paths_btn.UseVisualStyleBackColor = false;
+            this.update_all_paths_btn.Click += new System.EventHandler(this.update_all_paths_btn_Click);
+            // 
             // frmAdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 563);
+            this.Controls.Add(this.update_all_paths_btn);
             this.Controls.Add(this.updt_path_btn);
             this.Controls.Add(this.goBackBtn);
             this.Controls.Add(this.pfp_view);
@@ -232,5 +250,6 @@ namespace HuntersFormsApp
         private System.Windows.Forms.CheckBox pfp_view;
         private System.Windows.Forms.Button goBackBtn;
         private System.Windows.Forms.Button updt_path_btn;
+        private System.Windows.Forms.Button update_all_paths_btn;
     }
 }
