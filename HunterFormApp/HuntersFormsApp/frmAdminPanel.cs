@@ -18,6 +18,8 @@ using System.IO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Collections.ObjectModel;
 using MongoDB.Bson;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+using System.Security.Policy;
 
 namespace HuntersFormsApp
 {
@@ -233,15 +235,15 @@ namespace HuntersFormsApp
             homefrm.Show();
         }
 
+        //Bad code but too lazy to change...
         private void updt_path_btn_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(this.textBox1.Text))
+            if (String.IsNullOrEmpty(this.textBox1.Text) || this.textBox1.Text == "admin")
             {
-                Box.ErrorBox("Please enter a user name first!", "Missing UserError!");
+                Box.ErrorBox("Please enter a user name first!", "Missing User Error!");
                 return;
             }
 
-            string input = "";
             var getImagePathToUpdate = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(this.textBox1.Text)).Select(x => x.Image).First().ToString();
 
             var get_filename = getImagePathToUpdate.Split('\\').ToList().Last();
@@ -251,6 +253,48 @@ namespace HuntersFormsApp
             var filter = Builders<Users>.Filter.Eq(us => us.User, this.textBox1.Text);
             var update = Builders<Users>.Update.Set(us => us.Image, new_path);
             var result = personsCollection.UpdateOne(filter, update);
+            Box.SuccessBox("Succesfully updated the user path!", "SUCCESS!");
+        }
+
+        private void update_all_paths_btn_Click(object sender, EventArgs e)
+        {
+            //Fetch all usernames
+            var usernames = personsCollection.AsQueryable().AsEnumerable().Select(user => user.User).ToList();
+           
+            Box.SuccessBox(string.Join(", ", usernames), "test");
+            string getImagePath;
+            string get_filename, new_path;
+
+            foreach (var user in usernames)
+            {
+                try
+                {
+                    //Get pfp path of each user and update it
+
+                    //Skip admin user as it doesn't contain an Image element and will throw an error 
+                    if (user == "admin") continue;
+                    
+                    getImagePath = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(user)).Select(x => x.Image).First().ToString();
+                    get_filename = getImagePath.Split('\\').ToList().Last();
+
+                    new_path = Path.Combine(RESOURCES_PATH, get_filename).ToString();
+
+                    //Update if found on this computer (resources folder)
+                    if (File.Exists(new_path))
+                    {
+                        var filter = Builders<Users>.Filter.Eq(us => us.User, user);
+                        var update = Builders<Users>.Update.Set(us => us.Image, new_path);
+                        var result = personsCollection.UpdateOne(filter, update); 
+                    }
+                }
+
+                catch (Exception) 
+                {
+                    Box.ErrorBox("Something went wrong!", "Error");
+                    return;
+                }
+            }
+
             Box.SuccessBox("Succesfully updated the user path!", "SUCCESS!");
         }
     }
