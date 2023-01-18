@@ -1,5 +1,5 @@
 # HuntersFormsApp
-Development environment for a Social Network-like application (for College)
+Development environment for a Social Network-like application (for a College team project)
 
 > #### Requirements
 > - MongoDB Atlas database connection (Nuget package to use -> **MongoDB C#/.NET Driver** https://www.mongodb.com/docs/drivers/csharp/ <br>
