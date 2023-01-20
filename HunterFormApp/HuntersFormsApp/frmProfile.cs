@@ -25,11 +25,17 @@ namespace HuntersFormsApp
     public partial class frmProfile : Form
     {
         static private string connectionString = Environment.GetEnvironmentVariable("MONGO_URI");
-
+        private readonly Users _user;
         public frmProfile()
         {
             InitializeComponent();
             this.Text = "Profile";
+        }
+        public frmProfile(Users users)
+        {
+            InitializeComponent();
+            this.Text = "Profile";
+            _user = users;
         }
 
         private void logoutBtn_Click(object sender, EventArgs e)
@@ -54,15 +60,27 @@ namespace HuntersFormsApp
         internal static IMongoCollection<UsersRegister> personsCollection = usersDatabase.GetCollection<UsersRegister>("users");
         private void frmProfile_Load(object sender, EventArgs e)
         {
-            
+            string interests, age, fname, email, lname, image;
+            if(_user != null)
+            {
+                interests = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(_user.User)).Select(x => x.Interests).First().ToString();
+                age = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(_user.User)).Select(x => x.Age).First().ToString();
+                fname = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(_user.User)).Select(x => x.FirstName).First().ToString();
+                email = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(_user.User)).Select(x => x.Email).First().ToString();
+                lname = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(_user.User)).Select(x => x.LastName).First().ToString();
+                image = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(_user.User)).Select(x => x.Image).First().ToString();
 
+            }
+            else
+            {
+                interests = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(frmLogin.AuthPublicName)).Select(x => x.Interests).First().ToString();
+                age = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(frmLogin.AuthPublicName)).Select(x => x.Age).First().ToString();
+                fname = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(frmLogin.AuthPublicName)).Select(x => x.FirstName).First().ToString();
+                email = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(frmLogin.AuthPublicName)).Select(x => x.Email).First().ToString();
+                lname = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(frmLogin.AuthPublicName)).Select(x => x.LastName).First().ToString();
+                image = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(frmLogin.AuthPublicName)).Select(x => x.Image).First().ToString();
+            }
             //var filter = Builders<UsersRegister>.Filter.Eq(person => person.User, frmLogin.AuthPublicName);
-            var interests = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(frmLogin.AuthPublicName)).Select(x => x.Interests).First().ToString();
-            var age = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(frmLogin.AuthPublicName)).Select(x => x.Age).First().ToString();
-            var fname = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(frmLogin.AuthPublicName)).Select(x => x.FirstName).First().ToString();
-            var email = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(frmLogin.AuthPublicName)).Select(x => x.Email).First().ToString();
-            var lname = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(frmLogin.AuthPublicName)).Select(x => x.LastName).First().ToString();
-            var image = personsCollection.AsQueryable().AsEnumerable().Where(x => x.User.Equals(frmLogin.AuthPublicName)).Select(x => x.Image).First().ToString();
 
 
             profInterests.Text += $" {interests}";

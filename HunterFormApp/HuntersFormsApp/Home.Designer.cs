@@ -34,19 +34,22 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.logoutBtn = new System.Windows.Forms.Button();
-            this.profile = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(201, 99);
+            this.label1.Location = new System.Drawing.Point(294, 99);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(316, 59);
+            this.label1.Size = new System.Drawing.Size(209, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome back";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -109,15 +112,43 @@
             this.logoutBtn.UseVisualStyleBackColor = false;
             this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
-            // profile
+            // pictureBox2
             // 
-            this.profile.Location = new System.Drawing.Point(368, 293);
-            this.profile.Name = "profile";
-            this.profile.Size = new System.Drawing.Size(75, 23);
-            this.profile.TabIndex = 41;
-            this.profile.Text = "button1";
-            this.profile.UseVisualStyleBackColor = true;
-            this.profile.Click += new System.EventHandler(this.profile_Click);
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 102);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 49;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Location = new System.Drawing.Point(127, 118);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 15);
+            this.label2.TabIndex = 50;
+            this.label2.Text = "My Name";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.listView1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(194, 293);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(554, 131);
+            this.listView1.TabIndex = 51;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Home
             // 
@@ -125,7 +156,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 562);
-            this.Controls.Add(this.profile);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox1);
@@ -139,6 +172,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Home_FormClosed);
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,7 +185,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button logoutBtn;
-        private System.Windows.Forms.Button profile;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListView listView1;
     }
 }
 

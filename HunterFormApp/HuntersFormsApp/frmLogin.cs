@@ -132,7 +132,7 @@ namespace OriginLauncher
 
     //Collection field from C# class to BSON mapping
     [BsonIgnoreExtraElements]
-    internal class Users
+    public class Users
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
@@ -153,6 +153,14 @@ namespace OriginLauncher
         [BsonElement("image")]
         [BsonIgnoreIfDefault]
         public string Image { get; set; }
+
+        [BsonElement("fname")]
+        [BsonIgnoreIfDefault]
+        public string FirstName { get; set; }
+
+        [BsonElement("lname")]
+        [BsonIgnoreIfDefault]
+        public string LastName { get; set; }
     }
 }
 
