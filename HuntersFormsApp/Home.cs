@@ -127,7 +127,7 @@ namespace HuntersFormsApp
             //this.Hide();
         }
 
-        /*
+       
         private void label2_Click(object sender, EventArgs e)
         {
             if (frmLogin.AuthPublicName == "admin")
@@ -137,7 +137,7 @@ namespace HuntersFormsApp
             new frmProfile().Show();
             this.Hide();
         }
-        */
+        
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
