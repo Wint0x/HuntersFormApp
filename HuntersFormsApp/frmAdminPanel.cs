@@ -21,16 +21,18 @@ using MongoDB.Bson;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 using System.Security.Policy;
 using System.Threading;
+using System.Diagnostics;
 
 namespace HuntersFormsApp
 {
     public partial class frmAdminPanel : Form
     {
 
+        public static readonly string outputPathsFile = "paths.txt";
         public static void WriteToFile(string paths)
         {
 
-            File.WriteAllText("paths.txt", paths);
+            File.WriteAllText(outputPathsFile, paths);
         }
 
         public static string RESOURCES_PATH = Path.GetDirectoryName(Environment.CurrentDirectory).Replace("bin", "Resources"); //Get the directory of Resources
@@ -179,7 +181,19 @@ namespace HuntersFormsApp
                 {
                     var assign_pfp_string = all_users.Zip(all_images, (k, v) => new { k, v }).ToDictionary(x => x.k, x => "\n" + x.v);
                     print_users = GetDictionaryString(assign_pfp_string);
+                    
+                    //Writes usernames and profile picture paths to file and then opens it through the notepad!
                     WriteToFile(print_users);
+
+                    if (File.Exists(outputPathsFile)) 
+                    { 
+                        Process.Start("notepad.exe", outputPathsFile);
+                    }
+                    else
+                    { 
+                        Box.ErrorBox("Couldn't open file!", "fIOErr"); 
+                    }
+                    print_users = default;
                 }
 
                 else
