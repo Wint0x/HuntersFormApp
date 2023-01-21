@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.IO;
 
 namespace HuntersFormsApp
 {
@@ -53,7 +54,7 @@ namespace HuntersFormsApp
                 int index = 0;
                 foreach (var user in _usersCollection.AsQueryable())
                 {
-                    if (user.User == frmLogin.AuthPublicName)
+                    if (user.User == frmLogin.AuthPublicName || user.User == "admin")
                     {
                         loggedInUser = user;
                         continue;
@@ -62,19 +63,20 @@ namespace HuntersFormsApp
                     ListViewItem item = new ListViewItem();
                     item.Text = user.FirstName + " " + user.LastName;
 
-                    if (user.Image != null)
+                    if (user.Image != null && File.Exists(user.Image))
                     {
                         imageList.Images.Add(user.User, Image.FromFile(user.Image));
                         item.ImageKey = user.User;
+                        item.ImageIndex = index;
                     }
-                    item.ImageIndex = index;
                     listView1.Items.Add(item);
                     index++;
                 }
 
                 listView1.LargeImageList = imageList;
                 label2.Text = loggedInUser.FirstName + " " + loggedInUser.LastName;
-                pictureBox2.Image = new Bitmap(loggedInUser.Image);
+                if(loggedInUser.Image != null && File.Exists(loggedInUser.Image))
+                    pictureBox2.Image = new Bitmap(loggedInUser.Image);
             }
             //Allow access to admin control panel
             if (frmLogin.AuthPublicName == "admin")
@@ -127,7 +129,6 @@ namespace HuntersFormsApp
             //this.Hide();
         }
 
-       
         private void label2_Click(object sender, EventArgs e)
         {
             if (frmLogin.AuthPublicName == "admin")
@@ -137,7 +138,6 @@ namespace HuntersFormsApp
             new frmProfile().Show();
             this.Hide();
         }
-        
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {

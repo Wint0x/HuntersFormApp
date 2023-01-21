@@ -49,7 +49,7 @@
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Location = new System.Drawing.Point(294, 99);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 49);
+            this.label1.Size = new System.Drawing.Size(209, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome back";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -132,9 +132,10 @@
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label2.Location = new System.Drawing.Point(127, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 20);
+            this.label2.Size = new System.Drawing.Size(60, 15);
             this.label2.TabIndex = 50;
             this.label2.Text = "My Name";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // listView1
             // 
@@ -151,7 +152,7 @@
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 562);
