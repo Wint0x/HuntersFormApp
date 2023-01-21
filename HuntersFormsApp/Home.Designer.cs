@@ -1,4 +1,4 @@
-﻿namespace HuntersFormsApp
+namespace HuntersFormsApp
 {
     partial class Home
     {
