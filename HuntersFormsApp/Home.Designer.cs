@@ -1,4 +1,4 @@
-﻿namespace HuntersFormsApp
+namespace HuntersFormsApp
 {
     partial class Home
     {
@@ -135,6 +135,7 @@
             this.label2.Size = new System.Drawing.Size(77, 20);
             this.label2.TabIndex = 50;
             this.label2.Text = "My Name";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // listView1
             // 
