@@ -40,6 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errorLblLogin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(34, 174);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 23);
+            this.label1.Size = new System.Drawing.Size(69, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Username";
             // 
@@ -59,7 +60,7 @@
             this.txtUsernamelog.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsernamelog.Location = new System.Drawing.Point(37, 195);
             this.txtUsernamelog.Name = "txtUsernamelog";
-            this.txtUsernamelog.Size = new System.Drawing.Size(216, 31);
+            this.txtUsernamelog.Size = new System.Drawing.Size(216, 25);
             this.txtUsernamelog.TabIndex = 1;
             // 
             // txtPasswordlog
@@ -70,7 +71,7 @@
             this.txtPasswordlog.Location = new System.Drawing.Point(37, 252);
             this.txtPasswordlog.Name = "txtPasswordlog";
             this.txtPasswordlog.PasswordChar = '•';
-            this.txtPasswordlog.Size = new System.Drawing.Size(216, 31);
+            this.txtPasswordlog.Size = new System.Drawing.Size(216, 25);
             this.txtPasswordlog.TabIndex = 3;
             // 
             // label2
@@ -78,7 +79,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(34, 231);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 23);
+            this.label2.Size = new System.Drawing.Size(66, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Password";
             // 
@@ -89,7 +90,7 @@
             this.checkboxShowpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkboxShowpass.Location = new System.Drawing.Point(37, 289);
             this.checkboxShowpass.Name = "checkboxShowpass";
-            this.checkboxShowpass.Size = new System.Drawing.Size(151, 27);
+            this.checkboxShowpass.Size = new System.Drawing.Size(119, 21);
             this.checkboxShowpass.TabIndex = 5;
             this.checkboxShowpass.Text = "Show Password";
             this.checkboxShowpass.UseVisualStyleBackColor = true;
@@ -128,7 +129,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(73, 470);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(200, 23);
+            this.label3.Size = new System.Drawing.Size(156, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "Don\'t Have an Account?";
             // 
@@ -139,7 +140,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.label4.Location = new System.Drawing.Point(93, 501);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 23);
+            this.label4.Size = new System.Drawing.Size(101, 17);
             this.label4.TabIndex = 9;
             this.label4.Text = "Create Account";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -168,13 +169,27 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
-
+            // 
+            // errorLblLogin
+            // 
+            this.errorLblLogin.AutoEllipsis = true;
+            this.errorLblLogin.AutoSize = true;
+            this.errorLblLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.errorLblLogin.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.errorLblLogin.ForeColor = System.Drawing.Color.Red;
+            this.errorLblLogin.Location = new System.Drawing.Point(90, 422);
+            this.errorLblLogin.Name = "errorLblLogin";
+            this.errorLblLogin.Size = new System.Drawing.Size(0, 16);
+            this.errorLblLogin.TabIndex = 37;
+            this.errorLblLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(285, 567);
+            this.Controls.Add(this.errorLblLogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
@@ -213,6 +228,7 @@
         public System.Windows.Forms.TextBox txtUsernamelog;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label errorLblLogin;
     }
 }
 

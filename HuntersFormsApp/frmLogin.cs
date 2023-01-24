@@ -83,7 +83,7 @@ namespace OriginLauncher
             //No results, no matching username / password found!
             if (!results.Any())
             {
-                Box.ErrorBox(new[] { "Wrong Username or Password", "Login Error" });
+                this.errorLblLogin.Text = "Invalid User!";
                 return;
             }
 
